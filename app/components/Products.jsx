@@ -3,7 +3,7 @@ import ProductCard from './ProductCard'
 
 const Products = () => {
   return (
-    <div id='products'>
+    <div id='products' className='scroll-smooth'>
         <main className='my-32'>
 <h1 className='text-center font-bold text-2xl '>Awesome Product That You Never Seen</h1>
 <p className='text-center text-lg pt-5 px-10'>Convallis elit senectus justo dolor lorem, metus ex amet ac. Litora mattis in diam risus turpis vivamus, diam nisl lorem ligula vestibulum.</p>

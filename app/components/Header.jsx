@@ -57,7 +57,7 @@ const toggle = () => {
 }
 
   return (
-    <div className='w-full bg-red-500' id='home' ref={myRef}>
+    <div className='w-full bg-red-500 scroll-smooth' id='home'  ref={myRef}>
  
 <header className='flex flex-grow justify-around items-center relative'>
   
@@ -78,11 +78,11 @@ const toggle = () => {
 
 <nav className={`absolute w-full p-10 sm:block md:static  top-20 mx-auto ${menu?'top-[-1500%] transition-all duration-300 ease-in-out': 'top-20 transition-all duration-300 ease-in-out backdrop-blur-lg bg-white'}`}>
     <ul className='space-y-20 text-black md:space-y-0 md:flex md:items-center md:justify-end uppercase md:text-white p-10 '>
-        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href='#home'>Home</Link></li>
-        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href='#about'>About</Link></li>
-        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href='#products'>products</Link></li>
-        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href='#review'>review</Link></li> 
-        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href='#contact'>Contact</Link></li>
+        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href={'#home'} passHref className='scroll-smooth'>Home</Link></li>
+        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href={'#about'} passHref className='scroll-smooth'>About</Link></li>
+        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href={'#products'} passHref className='scroll-smooth'>products</Link></li>
+        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href={'#review'} passHref className='scroll-smooth'>review</Link></li> 
+        <li className='text-lg text-center p-5 uppercase hover:underline '><Link href={'#contact'} passHref className='scroll-smooth'>Contact</Link></li>
     </ul>
 </nav>
 

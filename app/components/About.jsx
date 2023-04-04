@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div id='about'>
+    <div id='about' className='scroll-smooth'>
         <main className='flex flex-col md:flex-row my-10 justify-center'>
             <div>
                 <Image src={'/Asset/images/vr.jpg'} width={500} height={500} className='oject-contain p-5 mx-auto'/>

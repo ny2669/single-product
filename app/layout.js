@@ -1,7 +1,6 @@
 import './globals.css'
 
-const SmoothPageScroll = require('smooth-page-scroll');
- typeof window === 'location' && SmoothPageScroll.install();
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className='scroll-smooth'>{children}</body>
+    <html lang="en" className='scroll-smooth'>
+      <body >{children}</body>
     </html>
   )
 }

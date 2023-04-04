@@ -19,7 +19,7 @@ const getRating = Array(rating).fill().map((_,i) => (
 ))
 
   return (
-    <div id='review'>
+    <div id='review' className='scroll-smooth'>
         <main className=''>
             <div className='text-center p-5'>
                 <h2 className='text-4xl p-2'>What Our
