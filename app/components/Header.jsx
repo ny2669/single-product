@@ -5,6 +5,10 @@ import Typewriter from 'typewriter-effect';
 import * as THREE from 'three'
 import BIRDS from 'vanta/dist/vanta.birds.min'
 import Link from 'next/link';
+import Particles from './Particle';
+
+
+
 
 
 
@@ -16,31 +20,43 @@ const Header = (props) => {
   const myRef = useRef(null)
 
 
-
+  // const particlesInit = useCallback(async engine => {
+  //   console.log(engine);
+  //   // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+  //   // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+  //   // starting from v2 you can add only the features you need reducing the bundle size
+  //   await loadFull(engine);
+  // }, []);
+  
+  // const particlesLoaded = useCallback(async container => {
+  //  console.log(container);
+  // }, []);
+  
+  
 
     const [menu,setMenu] = useState(true)
 
     const [vantaEffect, setVantaEffect] = useState(null)
  
   
-    useEffect(() => {
-      if (!vantaEffect) {
-        setVantaEffect(BIRDS({
-          el: myRef.current,
-          mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  THREE: THREE 
-        }))
-      }
-      return () => {
-        if (vantaEffect) vantaEffect.destroy();
-      };
-    }, [vantaEffect]);
+  //   useEffect(() => {
+  //     if (!vantaEffect) {
+  //       setVantaEffect(BIRDS({
+  //         el: myRef.current,
+  //         mouseControls: true,
+  // touchControls: true,
+  // gyroControls: false,
+  // minHeight: 200.00,
+  // minWidth: 200.00,
+  // scale: 1.00,
+  // scaleMobile: 1.00,
+  // THREE: THREE 
+  //       }))
+  //     }
+  //     return () => {
+  //       if (vantaEffect) vantaEffect.destroy();
+  //     };
+  //   }, [vantaEffect]);
 
 const toggle = () => {
 
@@ -57,7 +73,10 @@ const toggle = () => {
 }
 
   return (
-    <div className='w-full bg-red-500 scroll-smooth' id='home'  ref={myRef}>
+ 
+
+    <div className='w-full  bg-red-500 scroll-smooth' id='home'  ref={myRef}>
+
  
 <header className='flex flex-grow justify-around items-center relative'>
   
@@ -94,6 +113,8 @@ const toggle = () => {
       <h1 className='text-4xl md:text-4xl font-semibold'>Now get your </h1>
       <div className='flex items-center'>
       <h1 className='text-4xl md:text-4xl font-semibold flex items-center mr-3'>awsome </h1>
+
+
     <Typewriter
   options={{
     strings: ['VR Here', 'Product', 'Watch'],
@@ -113,17 +134,17 @@ const toggle = () => {
     <button className='flex relative  bg-white p-5 text-red-500 font-bold rounded-full my-10 uppercase'>See our product</button>
     </div>
     
-<div className='flex'>
-<Image src='/Asset/images/man.png' width={800} height={500} className='flex justify-end object-contain object-right'/>
+<div className='flex relative'>
+<Image src='/Asset/images/man.png' width={800} height={500} className='flex justify-end  object-contain object-right'/>
 
 </div>
 </div>
 
 
-
+<Particles height='800px'/>
 
     </div>
-
+    
     
   )
 }

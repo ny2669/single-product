@@ -14,9 +14,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-particles": "^2.9.3",
     "smooth-page-scroll": "^1.0.7",
     "tailwind-scrollbar-hide": "^1.1.7",
     "three": "^0.151.2",
+    "tsparticles": "^2.9.3",
     "typewriter-effect": "^2.19.0",
     "vanta": "^0.5.24"
   },
